@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between items-center px-12 py-6">
+  <nav class="flex justify-between items-center">
     <span>
       <img src="@/assets/icons/my-logo.png" class="w-10" alt="My logo" />
     </span>
@@ -9,14 +9,27 @@
       <h4>Contact</h4>
       <h4>Resume</h4>
       <div
-        class="bg-gradient-to-r from-violet-500 to-fuchsia-500 h-7 w-7 cursor-pointer color-changer rounded-full"
+        @click="toggleColoredSite"
+        :class="
+          !store.coloredSite
+            ? 'color-changer bg-gradient-to-r from-violet-500 to-fuchsia-500 '
+            : 'bg-gradient-to-tr  from-white to-black'
+        "
+        class="h-7 w-7 cursor-pointer rounded-full transition-all 1s"
       ></div>
     </span>
   </nav>
-  <div class="h-10 w-10 bg-pink-950"></div>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts" setup>
+import useMainStore from "@/stores/main"
+
+const store = useMainStore()
+
+function toggleColoredSite() {
+  store.coloredSite = !store.coloredSite
+}
+</script>
 
 <style scoped>
 @import url("../assets/styles/navbar.css");

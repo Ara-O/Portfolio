@@ -2,8 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: black;
   font-family: "Righteous", "sans-serif";
-  cursor: none;
+  /* cursor: none; */
+  padding-top: 1.5rem /* 24px */;
+  padding-bottom: 1.5rem /* 24px */;
+  padding-left: 3rem /* 48px */;
+  padding-right: 3rem /* 48px */;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
 }

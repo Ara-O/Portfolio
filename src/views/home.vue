@@ -1,10 +1,13 @@
 <template>
   <Cursor />
   <Navbar />
-  <h3 class="text-red-300">helo</h3>
+  <Hero />
+  <Marquee></Marquee>
 </template>
 
 <script lang="ts" setup>
 import Cursor from "@/components/Cursor.vue"
 import Navbar from "@/components/Navbar.vue"
+import Hero from "@/components/Hero.vue"
+import Marquee from "@/components/Marquee.vue"
 </script>
