@@ -9,7 +9,8 @@
     <article>
       <h3 class="text-7xl">Eyiara Oladipo</h3>
       <h5 class="text-sm font-['Poppins'] mt-7 w-[400px] leading-7">
-        Hi There! I am a Junior at the University of Detroit Mercy studying Computer Science
+        Hi There! I'm Ara and I am a Junior at the University of Detroit Mercy studying Computer
+        Science
       </h5>
       <button
         :class="!store.coloredSite ? 'border-white' : 'relative colored-button-border'"
@@ -42,11 +43,8 @@ window.addEventListener("mousemove", (e) => {
 <style scoped>
 .colored-button-border {
   background-clip: padding-box; /* !importanté */
-  border: solid 2px transparent;
-}
-
-.colored-button-border:hover {
   background: none;
+  border: solid 2px transparent;
   color: white;
 }
 
