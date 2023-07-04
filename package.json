@@ -14,6 +14,7 @@
   "dependencies": {
     "@vueuse/core": "^10.2.1",
     "pinia": "^2.1.3",
+    "three": "^0.154.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"
   },
@@ -21,6 +22,7 @@
     "@rushstack/eslint-patch": "^1.2.0",
     "@tsconfig/node18": "^2.0.1",
     "@types/node": "^18.16.17",
+    "@types/three": "^0.152.1",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.3",

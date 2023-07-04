@@ -19,6 +19,8 @@ const store = useMainStore()
 
 <style scoped>
 .marquee-text {
+  position: relative;
+  left: -45px;
   min-width: 100vw;
 }
 
@@ -27,9 +29,9 @@ const store = useMainStore()
 }
 
 .colored-text {
-  font-size: 72px;
-  animation: ColorRotate 15s linear infinite;
-  background: -webkit-linear-gradient(45deg, red, orange);
+  /* font-size: 96px; */
+  animation: ColorRotate 25s linear infinite;
+  background: -webkit-linear-gradient(45deg, rgb(0, 81, 255), rgb(120, 56, 162));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: none;

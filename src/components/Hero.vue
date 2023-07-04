@@ -1,4 +1,5 @@
 <template>
+  <Stars />
   <section class="mt-12 flex gap-56 items-center justify-center text-white">
     <img
       src="@/assets/images/chess-image.png"
@@ -24,6 +25,7 @@
 
 <script lang="ts" setup>
 import { ref } from "vue"
+import Stars from "./Stars.vue"
 import useMainStore from "@/stores/main"
 
 const store = useMainStore()
@@ -44,7 +46,7 @@ window.addEventListener("mousemove", (e) => {
 .colored-button-border {
   background-clip: padding-box; /* !importanté */
   background: none;
-  border: solid 2px transparent;
+  border: solid 1px transparent;
   color: white;
 }
 
@@ -58,8 +60,8 @@ window.addEventListener("mousemove", (e) => {
   z-index: -1;
   margin: -1px; /* !importanté */
   border-radius: inherit; /* !importanté */
-  animation: ColorRotate 15s linear infinite;
-  background: linear-gradient(to right, red, orange);
+  animation: ColorRotate 25s linear infinite;
+  background: linear-gradient(to right, rgb(0, 81, 255), rgb(120, 56, 162));
 }
 
 @keyframes ColorRotate {

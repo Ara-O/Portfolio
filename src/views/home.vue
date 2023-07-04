@@ -2,7 +2,8 @@
   <Cursor />
   <Navbar />
   <Hero />
-  <Marquee></Marquee>
+  <Marquee />
+  <Skills />
 </template>
 
 <script lang="ts" setup>
@@ -10,4 +11,5 @@ import Cursor from "@/components/Cursor.vue"
 import Navbar from "@/components/Navbar.vue"
 import Hero from "@/components/Hero.vue"
 import Marquee from "@/components/Marquee.vue"
+import Skills from "@/components/Skills.vue"
 </script>
