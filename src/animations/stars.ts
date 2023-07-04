@@ -1,6 +1,5 @@
 import * as THREE from "three"
 import { BufferGeometry } from "three"
-import { OrbitControls } from "three/addons/controls/OrbitControls.js"
 
 export default function renderStars(canvas: HTMLElement, height: number, width: number) {
   let sizes = {
@@ -11,14 +10,7 @@ export default function renderStars(canvas: HTMLElement, height: number, width: 
 
   const scene = new THREE.Scene()
 
-  //   scene.add(
-  //     new THREE.Mesh(
-  //       new THREE.BoxGeometry(1),
-  //       new THREE.MeshBasicMaterial({
-  //         color: "purple"
-  //       })
-  //     )
-  //   )
+  // TODO: Handle resizing
 
   const stars = new BufferGeometry()
   const numComponents = 3
@@ -33,7 +25,6 @@ export default function renderStars(canvas: HTMLElement, height: number, width: 
     starsPositions[(i % 3) + 2] = (Math.random() - 0.5) * radius
   }
 
-  console.log(starsPositions)
   stars.setAttribute("position", new THREE.BufferAttribute(starsPositions, numComponents))
   const starPoints = new THREE.Points(
     stars,
@@ -46,7 +37,6 @@ export default function renderStars(canvas: HTMLElement, height: number, width: 
   scene.add(starPoints)
   const camera = new THREE.PerspectiveCamera(75, sizes.aspectRatio, 0.1, 1000)
   camera.position.z = 5
-  const controls = new OrbitControls(camera, canvas)
 
   const renderer = new THREE.WebGLRenderer({
     canvas
@@ -56,11 +46,22 @@ export default function renderStars(canvas: HTMLElement, height: number, width: 
   renderer.setClearColor("black")
 
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
+  window.addEventListener("resize", () => {
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+
+    renderer.setSize(sizes.width, sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+  })
+
   function animate() {
     requestAnimationFrame(animate)
     starPoints.position.y += 0.001
     renderer.render(scene, camera)
-    controls.update()
   }
   animate()
 }
