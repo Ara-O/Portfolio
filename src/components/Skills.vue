@@ -5,16 +5,16 @@
       <section>
         <canvas height="300" width="300" ref="modelCanvas" v-if="false"></canvas>
         <h3 class="text-5xl">About Me</h3>
-        <h5 class="w-[30rem] font-['Poppins'] leading-7 text-[14.5px] font-light mt-7">
+        <h5 class="w-[30rem] font-['Poppins'] leading-7 text-[14.5px] mt-7">
           I am a junior studying Computer Science at the University of Detroit Mercy. I am
           passionate about Front-end development and UX/UI design. I have worked as a teaching
           assistant and have software development experience through various internships I have had
-          with JOURNi, Accenture, Google, and the Kapor Center.I have experience with HTML, CSS (
-          and a little bit of SASS ), Javascript and Vue.js. Along with experience in back-end
-          technologies like Node.js, Express and Mongo DB.
+          with JOURNi, Accenture, Google, and the Kapor Center.I have experience with HTML, CSS,
+          Javascript and Vue.js. I also have with experience in back-end technologies like Node.js,
+          Express and Mongo DB.
         </h5>
         <br /><br />
-        <h3 class="text-3xl">TL; DR</h3>
+        <h3 class="text-3xl">TL;DR</h3>
         <ul class="list-disc pl-5 leading-8 font-['Poppins'] text-sm mt-4">
           <li>Name: Eyiara "Ara" Oladipo</li>
           <li>Education Level: Junior</li>
@@ -22,6 +22,13 @@
           <li>Hobbies: Chess, Reading</li>
           <li>Favorite Language: Javascript</li>
         </ul>
+        <a href="/src/assets/Resume.pdf" download>
+          <button
+            class="hover:bg-white border hover:text-black font-[Poppins] text-[13px] px-6 py-3 font-medium mt-10 rounded-full bg-black text-white transition-colors"
+          >
+            Download My Resume
+          </button>
+        </a>
       </section>
       <!-- Right section -->
       <section>
@@ -64,6 +71,7 @@ watchEffect(() => {
     renderModel(modelCanvas.value, 300, 300)
   }
 })
+
 let frontEndSkills = [
   {
     name: "HTML",
