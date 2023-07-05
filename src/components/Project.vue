@@ -2,49 +2,58 @@
   <article class="flex gap-20 items-center">
     <article class="h-auto w-[35rem]">
       <img
-        :src="getImg(props.image)"
+        :src="getImg(props.project.imageSrc)"
         alt="Project image"
         class="hover:grayscale-0 duration-300 transition"
         :class="!store.coloredSite ? 'grayscale' : 'grayscale-0'"
       />
     </article>
     <article class="text-white h-auto">
-      <h3 class="text-3xl">{{ props.name }}</h3>
+      <h3 class="text-3xl">{{ props.project.name }}</h3>
       <h4 class="mt-4 w-[500px] font-['Poppins'] text-[15px] font-light leading-7">
-        {{ props.description }}
+        {{ props.project.description }}
       </h4>
       <br />
       <h4 class="font-['Poppins'] font-medium">Tools Used</h4>
-      <br />
-      <span
-        class="mt-8 border mr-5 text-white px-6 py-2 rounded-full font-['Poppins'] text-[13px]"
-        v-for="tool in toolsUsed"
-        >{{ tool }}</span
-      >
-      <br />
+      <div class="flex w-[500px] flex-wrap mt-8 gap-y-5">
+        <div
+          class="border flex items-center w-auto justify-center h-10 mr-5 text-white px-6 py-2 rounded-full font-['Poppins'] text-[13px]"
+          v-for="tool in props.project.toolsUsed"
+        >
+          {{ tool }}
+        </div>
+      </div>
       <span class="flex mt-12">
-        <button
-          :class="!store.coloredSite ? '' : 'relative colored-button-border border-black'"
-          class="border border-white w-32 px-5 h-12 font-['Poppins'] z-10 text-sm duration-200 hover:bg-white hover:text-black transition"
-        >
-          View Demo
-        </button>
-        <button
-          class="border border-white w-32 px-5 h-12 font-['Poppins'] text-sm duration-200 hover:bg-white hover:text-black transition"
-        >
-          View Github
-        </button>
+        <a :href="props.project.demoLink" target="_blank">
+          <button
+            class="border border-white w-32 px-5 h-12 font-['Poppins'] z-10 text-sm duration-200 hover:bg-white hover:text-black transition"
+          >
+            View Demo
+          </button>
+        </a>
+        <a :href="props.project.githubLink" target="_blank">
+          <button
+            class="border border-white w-32 px-5 h-12 font-['Poppins'] text-sm duration-200 hover:bg-white hover:text-black transition"
+          >
+            View Github
+          </button>
+        </a>
       </span>
     </article>
-    <article>
+    <article class="flex flex-col">
       <button
-        class="border w-32 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black transition"
-        v-if="props.index === 1"
+        :class="!store.coloredSite ? '' : 'relative colored-button-border border-black '"
+        class="border w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"
+        v-if="props.index !== 0"
+        @click="viewPreviousProject"
       >
         Previous Project
       </button>
       <button
-        class="border w-32 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black transition"
+        :class="!store.coloredSite ? '' : 'relative colored-button-border border-black'"
+        class="border w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"
+        v-if="props.index != props.projectsLength - 1"
+        @click="viewNextProject"
       >
         Next Project
       </button>
@@ -55,17 +64,33 @@
 <script lang="ts" setup>
 import useMainStore from "@/stores/main"
 
+type Project = {
+  name: string
+  imageSrc: string
+  description: string
+  toolsUsed: string[]
+  demoLink: string
+  githubLink: string
+}
+
 const store = useMainStore()
 const props = defineProps<{
   index: number
-  name: string
-  image: string
-  description: string
-  toolsUsed: string[]
+  project: Project
+  projectsLength: number
 }>()
+
+const emit = defineEmits(["viewNextProject", "viewPreviousProject"])
 
 function getImg(source: string): string {
   return new URL(source, import.meta.url).href
+}
+function viewNextProject() {
+  emit("viewNextProject")
+}
+
+function viewPreviousProject() {
+  emit("viewPreviousProject")
 }
 </script>
 
@@ -73,7 +98,7 @@ function getImg(source: string): string {
 .colored-button-border {
   background-clip: padding-box;
   background: none;
-  border: solid 1px transparent;
+  border: solid 2px black;
   color: white;
 }
 

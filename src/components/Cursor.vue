@@ -25,6 +25,12 @@ document.addEventListener("mousemove", (e) => {
   }
 })
 
+// if (cursor.value) {
+//   cursor.value.style.transform = `translate3d(${e.pageX + cursorSize.value - 85}px, ${
+//     e.pageY - cursorSize.value - 20
+//   }px, 0)`
+// }
+
 // watchEffect(() => {
 //     cursor.value.style.transform = `translate3d(${x.value - cursorSize.value}px, ${
 //       y.value - cursorSize.value

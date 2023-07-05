@@ -1,18 +1,23 @@
 <template>
-  <div class="marquee-text mt-32 flex items-center justify-center w-max gap-10 overflow-hidden">
+  <div
+    class="marquee-text mt-32 flex whitespace-nowrap items-center justify-center w-max gap-10 overflow-hidden"
+  >
     <h3
       :class="store.coloredSite ? 'colored-text' : ''"
-      class="outlined-border relative bg-clip-text text-black text-8xl w-[935px]"
+      class="outlined-border bg-clip-text overflow-hidden whitespace-nowrap text-black text-8xl"
     >
       Full-Stack Developer
+      <span
+        class="h-5 w-10 top-[-20px] inline-block rounded-full bg-black border border-white relative"
+      ></span>
+      Full-Stack Developer
     </h3>
-    <div class="h-5 w-10 rounded-full bg-black border border-white"></div>
-    <h3
+    <!-- <h3
       :class="store.coloredSite ? 'colored-text' : ''"
       class="text-black text-8xl w-[2415px] outlined-border"
     >
       Full-Stack Developer
-    </h3>
+    </h3> -->
   </div>
 </template>
 
@@ -26,7 +31,7 @@ const store = useMainStore()
 .marquee-text {
   position: relative;
   left: -45px;
-  min-width: 100vw;
+  max-width: 100vw;
 }
 
 .outlined-border {
