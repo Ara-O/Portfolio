@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 html {
+  color: pink !important;
   overflow-x: hidden;
 }
 
@@ -21,4 +22,48 @@ body {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none;
+}
+
+.colored-text {
+  /* font-size: 96px; */
+  animation: ColorRotate 25s linear infinite;
+  background: -webkit-linear-gradient(45deg, rgb(0, 81, 255), rgb(120, 56, 162));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.colored-button-border {
+  background-clip: padding-box; /* !importanté */
+  background: none;
+  border: solid 1px transparent;
+  color: white;
+}
+
+.colored-button-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px; /* !importanté */
+  border-radius: inherit; /* !importanté */
+  animation: ColorRotate 25s linear infinite;
+  background: linear-gradient(to right, rgb(0, 81, 255), rgb(120, 56, 162));
+}
+
+@keyframes ColorRotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  70% {
+    filter: hue-rotate(360deg);
+  }
+
+  100% {
+    filter: hue-rotate(0deg);
+  }
 }

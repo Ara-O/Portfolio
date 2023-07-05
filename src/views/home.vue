@@ -4,7 +4,7 @@
   <Hero />
   <Marquee />
   <Skills />
-  <Projects />
+  <!-- <Projects /> -->
 </template>
 
 <script lang="ts" setup>
@@ -13,5 +13,5 @@ import Navbar from "@/components/Navbar.vue"
 import Hero from "@/components/Hero.vue"
 import Marquee from "@/components/Marquee.vue"
 import Skills from "@/components/Skills.vue"
-import Projects from "@/components/Projects.vue"
+// import Projects from "@/components/Projects.vue"
 </script>

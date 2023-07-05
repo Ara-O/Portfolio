@@ -7,7 +7,12 @@
       Full-Stack Developer
     </h3>
     <div class="h-5 w-10 rounded-full bg-black border border-white"></div>
-    <h3 class="text-black text-8xl w-[2415px] outlined-border">Full-Stack Developer</h3>
+    <h3
+      :class="store.coloredSite ? 'colored-text' : ''"
+      class="text-black text-8xl w-[2415px] outlined-border"
+    >
+      Full-Stack Developer
+    </h3>
   </div>
 </template>
 

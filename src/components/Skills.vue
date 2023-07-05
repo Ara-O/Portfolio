@@ -1,6 +1,6 @@
 <template>
   <section class="px-10 py-10 text-white mt-32 border rounded-md skills-wrapper relative">
-    <section class="flex flex-wrap gap-60 mt-20 justify-center">
+    <section class="flex flex-wrap justify-evenly mt-20">
       <!-- Left section -->
       <section>
         <canvas height="300" width="300" ref="modelCanvas" v-if="false"></canvas>
@@ -57,10 +57,12 @@
       </section>
     </section>
     <br /><br />
+    <Projects />
   </section>
 </template>
 
 <script lang="ts" setup>
+import Projects from "./Projects.vue"
 import SkillsBox from "./SkillsBox.vue"
 import { ref, watchEffect } from "vue"
 import renderModel from "@/animations/helmet"

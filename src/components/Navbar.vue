@@ -4,10 +4,10 @@
       <img src="@/assets/icons/my-logo.png" class="w-10" alt="My logo" />
     </span>
     <span class="text-white text-sm font-['Poppins'] flex items-center gap-x-20">
-      <h4>Projects</h4>
-      <h4>About me</h4>
-      <h4>Contact</h4>
-      <h4>Resume</h4>
+      <h4 class="cursor-pointer">Projects</h4>
+      <h4 class="cursor-pointer">About me</h4>
+      <h4 class="cursor-pointer">Contact</h4>
+      <h4 class="cursor-pointer">Resume</h4>
       <div
         @click="toggleColoredSite"
         :class="
