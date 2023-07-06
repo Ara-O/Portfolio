@@ -22,7 +22,7 @@
           <li>Hobbies: Chess, Reading</li>
           <li>Favorite Language: Javascript</li>
         </ul>
-        <a href="/src/assets/Resume.pdf" download>
+        <a href="/Resume.pdf" download>
           <button
             class="hover:bg-white border hover:text-black font-[Poppins] text-[13px] px-6 py-3 font-medium mt-10 rounded-full bg-black text-white transition-colors"
           >
@@ -77,65 +77,65 @@ watchEffect(() => {
 let frontEndSkills = [
   {
     name: "HTML",
-    logoSrc: "../assets/images/html-logo.png"
+    logoSrc: "/html-logo.png"
   },
   {
     name: "CSS",
-    logoSrc: "../assets/images/css-logo.png"
+    logoSrc: "/css-logo.png"
   },
   {
     name: "Javascript",
-    logoSrc: "../assets/images/javascript-logo.png"
+    logoSrc: "/javascript-logo.png"
   },
   {
     name: "Typescript",
-    logoSrc: "../assets/images/typescript-logo.png"
+    logoSrc: "/typescript-logo.png"
   },
   {
     name: "Vue.js",
-    logoSrc: "../assets/images/vue-logo.png"
+    logoSrc: "/vue-logo.png"
   },
   {
     name: "Tailwind",
-    logoSrc: "../assets/images/tailwind-logo.png"
+    logoSrc: "/tailwind-logo.png"
   }
 ]
 
 let backEndSkills = [
   {
     name: "Node.js",
-    logoSrc: "../assets/images/node-js-logo.png"
+    logoSrc: "/node-js-logo.png"
   },
   {
     name: "Express.js",
-    logoSrc: "../assets/images/express-logo.png"
+    logoSrc: "/express-logo.png"
   },
   {
     name: "Mongo DB",
-    logoSrc: "../assets/images/mongo-db-logo.png"
+    logoSrc: "/mongo-db-logo.png"
   },
   {
     name: "Firebase",
-    logoSrc: "../assets/images/firebase-logo.png"
+    logoSrc: "/firebase-logo.png"
   },
   {
     name: "MySQL",
-    logoSrc: "../assets/images/mysql-logo.png"
+    logoSrc: "/mysql-logo.png"
   }
 ]
 
 let deploymentSkills = [
   {
     name: "Vercel",
-    logoSrc: "../assets/images/vercel-logo.png"
+    logoSrc: "/vercel-logo.png"
   },
   {
     name: "Github",
-    logoSrc: "../assets/images/github-logo.png"
+    logoSrc: "/github-logo.png"
   },
   {
     name: "Trello",
-    logoSrc: "../assets/images/trello-logo.png"
+    logoSrc: "/trello-logo.png"
   }
 ]
 </script>

@@ -7,11 +7,7 @@
     <h4 class="font-['Poppins'] font-light text-[14.5px]">Email: Oladipoeyiara@gmail.com</h4>
     <h4 class="mt-4 font-['Poppins'] font-light text-[14.5px]">Phone Number: 947-800-6421</h4>
     <h4 class="mt-4 font-['Poppins'] font-light text-[14.5px]">LinkedIn: Eyiara Oladipo</h4>
-    <img
-      src="@/assets/icons/my-logo.png"
-      class="absolute w-10 right-10 bottom-5"
-      alt="Ara's logo"
-    />
+    <img src="/my-logo.png" class="absolute w-10 right-10 bottom-5" alt="Ara's logo" />
   </div>
 </template>
 
