@@ -1,28 +1,12 @@
 <template>
   <article class="flex gap-20 items-center">
-    <article class="h-auto w-[35rem]">
+    <article class="h-auto w-[38rem]">
       <img
         :src="getImg(props.project.imageSrc)"
         alt="Project image"
-        class="hover:grayscale-0 duration-300 transition"
+        class="hover:grayscale-0 duration-300 rounded-lg h-auto w-[600px] object-contain transition"
         :class="!store.coloredSite ? 'grayscale' : 'grayscale-0'"
       />
-    </article>
-    <article class="text-white h-auto">
-      <h3 class="text-3xl">{{ props.project.name }}</h3>
-      <h4 class="mt-4 w-[500px] font-['Poppins'] text-[15px] font-light leading-7">
-        {{ props.project.description }}
-      </h4>
-      <br />
-      <h4 class="font-['Poppins'] font-medium">Tools Used</h4>
-      <div class="flex w-[500px] flex-wrap mt-8 gap-y-5">
-        <div
-          class="border flex items-center w-auto justify-center h-10 mr-5 text-white px-6 py-2 rounded-full font-['Poppins'] text-[13px]"
-          v-for="tool in props.project.toolsUsed"
-        >
-          {{ tool }}
-        </div>
-      </div>
       <span class="flex mt-12">
         <a :href="props.project.demoLink" target="_blank">
           <button
@@ -40,7 +24,23 @@
         </a>
       </span>
     </article>
-    <article class="flex flex-col">
+    <article class="text-white h-auto">
+      <h3 class="text-3xl">{{ props.project.name }}</h3>
+      <h4 class="mt-4 w-[500px] font-['Poppins'] text-[15px] font-light leading-7">
+        {{ props.project.description }}
+      </h4>
+      <br />
+      <h4 class="font-['Poppins'] font-medium">Tools Used</h4>
+      <div class="flex w-[500px] flex-wrap mt-8 gap-y-5">
+        <div
+          class="border flex items-center w-auto justify-center h-10 mr-5 text-white px-6 py-2 rounded-full font-['Poppins'] text-[13px]"
+          v-for="tool in props.project.toolsUsed"
+        >
+          {{ tool }}
+        </div>
+      </div>
+    </article>
+    <article class="flex flex-col self-center">
       <button
         :class="!store.coloredSite ? '' : 'relative colored-button-border border-black '"
         class="border w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"

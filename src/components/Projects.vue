@@ -29,7 +29,7 @@ let currentProject = ref<number>(0)
 let allProjects: Project[] = [
   {
     name: "UDM Reimbursement Manager",
-    imageSrc: "../assets/images/magic-donut-image.png",
+    imageSrc: "../assets/images/udm-reimbursement-project-image.png",
     description:
       "I collaborated with three classmates on a project to enhance the reimbursement system for the College of Engineering at the University of Detroit Mercy. Our goal was to create a more efficient and user-friendly system for generating reimbursement documents for faculty purchases.",
     toolsUsed: ["Vue.js", "Typescript", "Node.js", "Express", "Mongo DB"],
@@ -38,7 +38,7 @@ let allProjects: Project[] = [
   },
   {
     name: "Children Association Tests",
-    imageSrc: "../assets/images/magic-donut-image.png",
+    imageSrc: "../assets/images/implicit-association-tests-image.png",
     description:
       "Collaborated with the assistant professor of psychology at the University of Detroit Mercy to develop a website that includes several tests to measure and gather data on implicit gender and racial biases in children.",
     toolsUsed: ["Vue.js", "Firebase"],
@@ -46,8 +46,17 @@ let allProjects: Project[] = [
     githubLink: "https://github.com/Ara-O/Association-Tests"
   },
   {
+    name: "Minim",
+    imageSrc: "../assets/images/implicit-association-tests-image.png",
+    description:
+      "A minimalist note-taking site with AI features like note summarization, text to speech, and rich text formatting.",
+    toolsUsed: ["React", "Node.js", "Express", "OpenAI"],
+    demoLink: "https://children-association-tests.netlify.app",
+    githubLink: "https://github.com/Ara-O/Association-Tests"
+  },
+  {
     name: "Budgeting Site",
-    imageSrc: "../assets/images/magic-donut-image.png",
+    imageSrc: "../assets/images/budgeting-site-image.png",
     description:
       "I created a website that can be used to track user expenses, income, bills, and money/spending goals. The website uses firebase's realtime database and authentication to keep track of user data.",
     toolsUsed: ["Nuxt.js", "Firebase"],
@@ -56,7 +65,7 @@ let allProjects: Project[] = [
   },
   {
     name: "Windows 10 Clone",
-    imageSrc: "../assets/images/magic-donut-image.png",
+    imageSrc: "../assets/images/windows-clone-image.png",
     description:
       "Created in memory of my use of windows 10. This is a clone of the basic Windows 10 layout; From the lock screen and password page, to the home screen with moveable icons.",
     toolsUsed: ["Vue.js"],
@@ -65,7 +74,7 @@ let allProjects: Project[] = [
   },
   {
     name: "Anime finder",
-    imageSrc: "../assets/images/magic-donut-image.png",
+    imageSrc: "../assets/images/animes-finder-image.png",
     description:
       "A side project to help users serch for, read more about, and find different animes of different genres",
     toolsUsed: ["Vue.js", "Firebase"],
@@ -74,7 +83,7 @@ let allProjects: Project[] = [
   },
   {
     name: "Project Fit",
-    imageSrc: "../assets/images/magic-donut-image.png",
+    imageSrc: "../assets/images/project-fit-image.png",
     description:
       "Project Fit is a website that can be used to generate random exercises with sets and repetitions. The advanced variation provides the user to provide an option of selecting their rest time, number of exercises, and difficulty.",
     toolsUsed: ["Vue.js"],
@@ -83,7 +92,7 @@ let allProjects: Project[] = [
   },
   {
     name: "This portfolio :D",
-    imageSrc: "../assets/images/magic-donut-image.png",
+    imageSrc: "../assets/images/portfolio-image.png",
     description: "My personal portfolio.",
     toolsUsed: ["Vue.js", "Three.js"],
     demoLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley",
