@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  color: pink !important;
+  color: white !important;
   overflow-x: hidden;
 }
 

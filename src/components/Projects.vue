@@ -32,7 +32,7 @@ let allProjects: Project[] = [
     imageSrc: "../assets/images/udm-reimbursement-project-image.png",
     description:
       "I collaborated with three classmates on a project to enhance the reimbursement system for the College of Engineering at the University of Detroit Mercy. Our goal was to create a more efficient and user-friendly system for generating reimbursement documents for faculty purchases.",
-    toolsUsed: ["Vue.js", "Typescript", "Node.js", "Express", "Mongo DB"],
+    toolsUsed: ["Vue.js", "Node.js", "Express", "Mongo DB"],
     demoLink: "https://udm-reimbursement-project.vercel.app",
     githubLink: "https://github.com/Ara-O/UDM-Reimbursement-Project"
   },

@@ -1,5 +1,5 @@
 <template>
-  <article class="flex gap-20 items-center">
+  <article class="flex gap-20 items-start">
     <article class="h-auto w-[38rem]">
       <img
         :src="getImg(props.project.imageSrc)"
