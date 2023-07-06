@@ -1,8 +1,8 @@
 <template>
-  <section class="mt-28 flex items-center flex-col mb-20">
+  <section class="mt-12 flex items-center flex-col mb-20" id="contact-me-section">
     <h3 class="text-5xl">Contact Me</h3>
     <br /><br />
-    <div class="flex items-center gap-16">
+    <div class="flex items-center gap-16 mt-10">
       <BusinessCard />
       <div class="flex flex-col gap-3">
         <a
@@ -24,6 +24,7 @@
         </a>
         <button
           class="border border-white w-48 px-5 h-12 font-['Poppins'] text-sm duration-200 hover:bg-white hover:text-black transition"
+          @click="colorizeSite"
         >
           Colorize Website :)
         </button>
@@ -35,4 +36,11 @@
 
 <script lang="ts" setup>
 import BusinessCard from "./BusinessCard.vue"
+import useMainStore from "@/stores/main"
+
+const store = useMainStore()
+
+function colorizeSite() {
+  store.coloredSite = true
+}
 </script>

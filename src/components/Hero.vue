@@ -13,12 +13,18 @@
         Hi There! I'm Ara and I am a Junior at the University of Detroit Mercy studying Computer
         Science
       </h5>
-      <button
-        :class="!store.coloredSite ? 'border-white' : 'relative colored-button-border'"
-        class="hover:bg-white border hover:text-black font-[Poppins] text-[13px] px-6 py-3 font-medium mt-7 rounded-full bg-black text-white transition-colors"
-      >
-        View Projects
-      </button>
+      <a href="#projects-section">
+        <button
+          :class="
+            !store.coloredSite
+              ? 'border-white'
+              : 'relative colored-button-border hover:text-white hover:bg-inherit'
+          "
+          class="hover:bg-white border hover:text-black font-[Poppins] text-[13px] px-6 py-3 font-medium mt-7 rounded-full bg-black text-white transition-colors"
+        >
+          View Projects
+        </button>
+      </a>
     </article>
   </section>
 </template>

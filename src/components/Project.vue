@@ -40,24 +40,6 @@
         </div>
       </div>
     </article>
-    <article class="flex flex-col self-center">
-      <button
-        :class="!store.coloredSite ? '' : 'relative colored-button-border border-black '"
-        class="border w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"
-        v-if="props.index !== 0"
-        @click="viewPreviousProject"
-      >
-        Previous Project
-      </button>
-      <button
-        :class="!store.coloredSite ? '' : 'relative colored-button-border border-black'"
-        class="border w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"
-        v-if="props.index != props.projectsLength - 1"
-        @click="viewNextProject"
-      >
-        Next Project
-      </button>
-    </article>
   </article>
 </template>
 
@@ -80,17 +62,8 @@ const props = defineProps<{
   projectsLength: number
 }>()
 
-const emit = defineEmits(["viewNextProject", "viewPreviousProject"])
-
 function getImg(source: string): string {
   return new URL(source, import.meta.url).href
-}
-function viewNextProject() {
-  emit("viewNextProject")
-}
-
-function viewPreviousProject() {
-  emit("viewPreviousProject")
 }
 </script>
 

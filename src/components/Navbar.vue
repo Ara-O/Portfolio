@@ -4,10 +4,10 @@
       <img src="/my-logo.png" class="w-10" alt="My logo" />
     </span>
     <span class="text-white text-sm font-['Poppins'] flex items-center gap-x-20">
-      <h4 class="cursor-pointer">Projects</h4>
-      <h4 class="cursor-pointer">About me</h4>
-      <h4 class="cursor-pointer">Contact</h4>
-      <h4 class="cursor-pointer">Resume</h4>
+      <a href="#about-me-section"> <h4 class="cursor-pointer">About me</h4></a>
+      <a href="#projects-section"> <h4 class="cursor-pointer">Projects</h4></a>
+      <a href="#contact-me-section"><h4 class="cursor-pointer">Contact</h4></a>
+      <a href="/Resume.pdf" target="_blank"> <h4 class="cursor-pointer">Resume</h4></a>
       <div
         @click="toggleColoredSite"
         :class="

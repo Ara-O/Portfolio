@@ -1,5 +1,8 @@
 <template>
-  <section class="px-10 py-10 text-white mt-32 border rounded-md skills-wrapper relative">
+  <section
+    id="about-me-section"
+    class="px-10 py-10 text-white mt-32 border rounded-md skills-wrapper relative"
+  >
     <section class="flex flex-wrap justify-evenly mt-20">
       <!-- Left section -->
       <section>

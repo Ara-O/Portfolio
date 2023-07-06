@@ -1,6 +1,6 @@
 <template>
   <div
-    class="business-card-container border px-10 py-10 border-stone-900 rounded-md h-64 w-[500px] relative"
+    class="business-card-container border px-10 py-12 border-stone-900 rounded-md h-[270px] w-[500px] relative"
   >
     <h3 class="text-2xl">Eyiara Oladipo</h3>
     <br />

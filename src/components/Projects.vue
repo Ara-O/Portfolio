@@ -1,21 +1,47 @@
 <template>
-  <section class="mt-20 text-white px-[11%]">
+  <section class="mt-20 text-white px-[11%]" id="projects-section">
     <h2 class="text-5xl">Projects</h2>
     <br /><br />
-    <Project
-      :index="currentProject"
-      :project="allProjects[currentProject]"
-      :projects-length="allProjects.length"
-      @viewNextProject="viewNextProject"
-      @viewPreviousProject="viewPreviousProject"
-    />
+    <div v-for="(project, index) in allProjects">
+      <Project
+        v-show="index < 3 * projectIndex"
+        :index="index"
+        class="mb-20"
+        :project="project"
+        :projects-length="allProjects.length"
+        @viewNextProject="viewNextProject"
+        @viewPreviousProject="viewPreviousProject"
+      />
+    </div>
+    <article class="flex flex-col items-center">
+      <!-- <button
+        v-if="projectIndex !== 1"
+        :class="!store.coloredSite ? '' : 'relative colored-button-border border-black '"
+        class="border w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"
+        @click="viewPreviousProject"
+      >
+        View Less Projects
+      </button> -->
+      <button
+        v-if="projectIndex < Math.ceil(allProjects.length / 3)"
+        :class="
+          !store.coloredSite ? '' : 'relative colored-button-border border-black hover:text-white'
+        "
+        class="border rounded-full w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"
+        @click="viewNextProject"
+      >
+        View More Projects
+      </button>
+    </article>
   </section>
 </template>
 
 <script lang="ts" setup>
+import useMainStore from "@/stores/main"
 import { ref } from "vue"
 import Project from "./Project.vue"
 
+const store = useMainStore()
 type Project = {
   name: string
   imageSrc: string
@@ -25,7 +51,7 @@ type Project = {
   githubLink: string
 }
 
-let currentProject = ref<number>(0)
+let projectIndex = ref<number>(1)
 let allProjects: Project[] = [
   {
     name: "UDM Reimbursement Manager",
@@ -47,7 +73,7 @@ let allProjects: Project[] = [
   },
   {
     name: "Minim",
-    imageSrc: "/implicit-association-tests-image.png",
+    imageSrc: "/minim-image.png",
     description:
       "A minimalist note-taking site with AI features like note summarization, text to speech, and rich text formatting.",
     toolsUsed: ["React", "Node.js", "Express", "OpenAI"],
@@ -101,14 +127,14 @@ let allProjects: Project[] = [
 ]
 
 function viewNextProject() {
-  if (currentProject.value < allProjects.length - 1) {
-    currentProject.value++
+  if (projectIndex.value < allProjects.length - 1) {
+    projectIndex.value++
   }
 }
 
 function viewPreviousProject() {
-  if (currentProject.value > 0) {
-    currentProject.value--
+  if (projectIndex.value > 0) {
+    projectIndex.value--
   }
 }
 </script>
