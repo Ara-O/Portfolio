@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-20 text-white px-[11%]" id="projects-section">
+  <section class="mt-20 text-white" id="projects-section">
     <h2 class="text-5xl">Projects</h2>
     <br /><br />
     <div v-for="(project, index) in allProjects">
@@ -24,9 +24,6 @@
       </button> -->
       <button
         v-if="projectIndex < Math.ceil(allProjects.length / 3)"
-        :class="
-          !store.coloredSite ? '' : 'relative colored-button-border border-black hover:text-white'
-        "
         class="border rounded-full w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"
         @click="viewNextProject"
       >

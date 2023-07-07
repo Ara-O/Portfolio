@@ -3,7 +3,7 @@
     id="stars"
     ref="stars"
     class="z-[-1]"
-    style="position: absolute; left: 0; background-color: black"
+    style="position: absolute; left: 0; background-color: black; width: 100%"
   ></canvas>
 </template>
 

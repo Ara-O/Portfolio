@@ -68,3 +68,98 @@ body {
     filter: hue-rotate(0deg);
   }
 }
+
+@media (max-width: 1650px) {
+  #about-me-section {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+
+@media (max-width: 1420px) {
+  #about-me-section section {
+    justify-content: center;
+    text-align: center;
+    gap: 100px;
+  }
+
+  #about-me-section section ul {
+    list-style-type: none;
+  }
+
+  .skills {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .skills img {
+    width: 3.3rem;
+  }
+
+  .project {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1300px) {
+  .project {
+    text-align: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .demo-github-link {
+    justify-content: center;
+  }
+
+  .tools {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .chess-image {
+    display: none;
+  }
+
+  .hero-article {
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-items {
+    display: none;
+  }
+}
+
+@media (max-width: 605px) {
+  .circle-cursor {
+    display: none;
+  }
+  .hero-article h3 {
+    font-size: 3rem;
+  }
+  .hero-article h5 {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  #about-me-section {
+    padding: 0px;
+    border: solid 2px black;
+    margin: 0px;
+  }
+
+  #contact-me-section div {
+    align-items: center;
+
+    justify-content: center;
+  }
+}

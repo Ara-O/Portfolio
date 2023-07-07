@@ -1,6 +1,6 @@
 <template>
   <div
-    class="h-10 w-10 mix-blend-difference z-50 pointer-events-none transition-transform duration-75 ease-linear border border-white absolute rounded-full flex items-center justify-center"
+    class="circle-cursor h-10 w-10 mix-blend-difference z-50 pointer-events-none transition-transform duration-75 ease-linear border border-white absolute rounded-full flex items-center justify-center"
     :style="{
       width: cursorSize,
       height: cursorSize

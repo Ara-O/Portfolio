@@ -2,7 +2,7 @@
   <section class="mt-12 flex items-center flex-col mb-20" id="contact-me-section">
     <h3 class="text-5xl">Contact Me</h3>
     <br /><br />
-    <div class="flex items-center gap-16 mt-10">
+    <div class="flex items-center gap-16 mt-10 flex-wrap">
       <BusinessCard />
       <div class="flex flex-col gap-3">
         <a

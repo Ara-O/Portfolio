@@ -1,14 +1,14 @@
 <template>
   <section
     id="about-me-section"
-    class="px-10 py-10 text-white mt-32 border rounded-md skills-wrapper relative"
+    class="px-[12%] py-10 text-white mt-32 border rounded-md skills-wrapper relative"
   >
-    <section class="flex flex-wrap justify-evenly mt-20">
+    <section class="flex flex-wrap justify-between mt-20">
       <!-- Left section -->
       <section>
         <canvas height="300" width="300" ref="modelCanvas" v-if="false"></canvas>
         <h3 class="text-5xl">About Me</h3>
-        <h5 class="w-[30rem] font-['Poppins'] leading-7 text-md font-light mt-7">
+        <h5 class="w-auto max-w-[30rem] font-['Poppins'] leading-7 text-md font-light mt-7">
           I am a junior studying Computer Science at the University of Detroit Mercy. I am
           passionate about Front-end development and UX/UI design. I have worked as a teaching
           assistant and have software development experience through various internships and
@@ -38,19 +38,19 @@
         <h3 class="text-5xl">Skills</h3>
         <h3 class="text-2xl mt-7">Front-End</h3>
         <br />
-        <article class="flex items-start gap-10">
+        <article class="flex items-start gap-10 skills">
           <SkillsBox v-for="skill in frontEndSkills" :name="skill.name" :logo-src="skill.logoSrc" />
         </article>
 
         <h3 class="text-2xl mt-10">Back-End</h3>
         <br />
-        <article class="flex items-start gap-10">
+        <article class="flex items-start gap-10 skills">
           <SkillsBox v-for="skill in backEndSkills" :name="skill.name" :logo-src="skill.logoSrc" />
         </article>
 
         <h3 class="text-2xl mt-10">Miscellaneous</h3>
         <br />
-        <article class="flex items-start gap-10">
+        <article class="flex items-start gap-10 skills">
           <SkillsBox
             v-for="skill in deploymentSkills"
             :name="skill.name"

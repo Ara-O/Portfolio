@@ -5,9 +5,9 @@
       src="/chess-image.png"
       ref="chessImage"
       alt="Chess image"
-      class="w-40 hidden transition-transform ease-linear duration-75 sm:block"
+      class="w-40 chess-image transition-transform ease-linear duration-75"
     />
-    <article>
+    <article class="hero-article">
       <h3 class="text-7xl">Eyiara Oladipo</h3>
       <h5 class="text-sm font-['Poppins'] mt-7 w-[400px] leading-7">
         Hi There! I'm Ara and I am a Junior at the University of Detroit Mercy studying Computer
