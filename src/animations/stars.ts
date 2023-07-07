@@ -39,7 +39,8 @@ export default function renderStars(canvas: HTMLElement, height: number, width: 
   camera.position.z = 5
 
   const renderer = new THREE.WebGLRenderer({
-    canvas
+    canvas,
+    alpha: true
   })
 
   renderer.setSize(sizes.width, sizes.height)
@@ -55,6 +56,7 @@ export default function renderStars(canvas: HTMLElement, height: number, width: 
     camera.updateProjectionMatrix()
 
     renderer.setSize(sizes.width, sizes.height)
+
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
   })
 

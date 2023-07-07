@@ -4,6 +4,7 @@
       <img
         :src="getImg(props.project.imageSrc)"
         alt="Project image"
+        loading="lazy"
         class="hover:grayscale-0 duration-300 rounded-lg h-auto w-[600px] object-contain transition"
         :class="!store.coloredSite ? 'grayscale' : 'grayscale-0'"
       />

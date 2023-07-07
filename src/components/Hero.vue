@@ -2,7 +2,7 @@
   <Stars />
   <section class="mt-12 flex gap-56 items-center justify-center text-white">
     <img
-      src="/chess-image.png"
+      src="/chess-image.webp"
       ref="chessImage"
       alt="Chess image"
       class="w-40 chess-image transition-transform ease-linear duration-75"

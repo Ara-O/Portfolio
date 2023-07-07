@@ -4,6 +4,7 @@
     <img
       :src="getImg(props.logoSrc)"
       alt="Logo image"
+      loading="lazy"
       class="w-16 h-16 object-contain grayscale hover:grayscale-0 transition"
       :class="store.coloredSite ? 'grayscale-0' : 'grayscale '"
     />

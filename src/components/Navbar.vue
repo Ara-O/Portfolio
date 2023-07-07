@@ -1,7 +1,7 @@
 <template>
   <nav class="flex justify-between items-center">
     <span>
-      <img src="/my-logo.png" class="w-10" alt="My logo" />
+      <img src="/my-logo.webp" class="w-10" alt="My logo" />
     </span>
     <span class="navbar-items text-white text-sm font-['Poppins'] flex items-center gap-x-20">
       <a href="#about-me-section"> <h4 class="cursor-pointer">About me</h4></a>
