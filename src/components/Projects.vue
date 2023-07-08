@@ -75,7 +75,7 @@ let allProjects: Project[] = [
       "A minimalist note-taking site with AI features like note summarization, text to speech, and rich text formatting.",
     toolsUsed: ["React", "Node.js", "Express", "OpenAI"],
     demoLink: "https://children-association-tests.netlify.app",
-    githubLink: "https://github.com/Ara-O/Association-Tests"
+    githubLink: "https://github.com/Ara-O/Minim-React"
   },
   {
     name: "Budgeting Site",

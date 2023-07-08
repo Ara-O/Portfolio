@@ -37,11 +37,14 @@ body {
 
 .colored-button-border {
   background-clip: padding-box; /* !importanté */
-  background: none;
+  background: initial;
   border: solid 1px transparent;
   color: white;
 }
 
+.colored-button-border:hover {
+  background-color: initial !important;
+}
 .colored-button-border::before {
   content: "";
   position: absolute;
