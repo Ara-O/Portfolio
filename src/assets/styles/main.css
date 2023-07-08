@@ -148,6 +148,10 @@ body {
 }
 
 @media (max-width: 605px) {
+  .business-card-container img {
+    display: none;
+  }
+
   .circle-cursor {
     display: none;
   }
@@ -156,6 +160,7 @@ body {
   }
   .hero-article h5 {
     font-size: 13px;
+    padding: 0px 25px;
     text-align: center;
   }
 
@@ -167,7 +172,6 @@ body {
 
   #contact-me-section div {
     align-items: center;
-
     justify-content: center;
   }
 }
