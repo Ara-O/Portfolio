@@ -74,7 +74,7 @@ let allProjects: Project[] = [
     description:
       "A minimalist note-taking site with AI features like note summarization, text to speech, and rich text formatting.",
     toolsUsed: ["React", "Node.js", "Express", "OpenAI"],
-    demoLink: "https://children-association-tests.netlify.app",
+    demoLink: "https://minim-react.vercel.app/",
     githubLink: "https://github.com/Ara-O/Minim-React"
   },
   {
