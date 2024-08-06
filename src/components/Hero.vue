@@ -9,9 +9,9 @@
     />
     <article class="hero-article">
       <h3 class="text-7xl">Eyiara Oladipo</h3>
-      <h5 class="text-sm font-['Poppins'] mt-7 w-[400px] leading-7">
-        Hi There! I'm Ara and I am a Junior at the University of Detroit Mercy studying Computer
-        Science
+      <h5 class="text-sm font-['Poppins'] mt-7 w-[490px] leading-8">
+        Hi There! I'm Ara and I am a senior at the University of Detroit Mercy studying Computer
+        Science with a minor in Leadership
       </h5>
       <a href="#projects-section">
         <button

@@ -3,25 +3,9 @@
     <h2 class="text-5xl">Projects</h2>
     <br /><br />
     <div v-for="(project, index) in allProjects">
-      <Project
-        v-show="index < 3 * projectIndex"
-        :index="index"
-        class="mb-20"
-        :project="project"
-        :projects-length="allProjects.length"
-        @viewNextProject="viewNextProject"
-        @viewPreviousProject="viewPreviousProject"
-      />
+      <Project v-show="index < 3 * projectIndex" :index="index" class="mb-20" :project="project" />
     </div>
     <article class="flex flex-col items-center">
-      <!-- <button
-        v-if="projectIndex !== 1"
-        :class="!store.coloredSite ? '' : 'relative colored-button-border border-black '"
-        class="border w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"
-        @click="viewPreviousProject"
-      >
-        View Less Projects
-      </button> -->
       <button
         v-if="projectIndex < Math.ceil(allProjects.length / 3)"
         class="border rounded-full w-48 px-5 h-12 font-['Poppins'] text-sm hover:bg-white hover:text-black relative z-10 transition"
@@ -51,6 +35,15 @@ type Project = {
 let projectIndex = ref<number>(1)
 let allProjects: Project[] = [
   {
+    name: "OEE Manager",
+    imageSrc: "/oee-manager.png",
+    description:
+      "Developed the front-end for a software application that tracks Overall Equipment Effectiveness (OEE) to measure machine productivity in an Allen Bradley PLC controller. The software is updated in real-time and displays multiple data points in a user-friendly layout",
+    toolsUsed: ["Vue.js", "Golang", "SQLite"],
+    demoLink: "",
+    githubLink: ""
+  },
+  {
     name: "UDM Reimbursement Manager",
     imageSrc: "/udm-reimbursement-project-image.webp",
     description:
@@ -68,15 +61,15 @@ let allProjects: Project[] = [
     demoLink: "https://children-association-tests.netlify.app",
     githubLink: "https://github.com/Ara-O/Association-Tests"
   },
-  {
-    name: "Minim",
-    imageSrc: "/minim-image.webp",
-    description:
-      "A minimalist note-taking site with AI features like note summarization, text to speech, and rich text formatting.",
-    toolsUsed: ["React", "Node.js", "Express", "OpenAI"],
-    demoLink: "https://minim-react.vercel.app/",
-    githubLink: "https://github.com/Ara-O/Minim-React"
-  },
+  // {
+  //   name: "Minim",
+  //   imageSrc: "/minim-image.webp",
+  //   description:
+  //     "A minimalist note-taking site with AI features like note summarization, text to speech, and rich text formatting.",
+  //   toolsUsed: ["React", "Node.js", "Express", "OpenAI"],
+  //   demoLink: "https://minim-react.vercel.app/",
+  //   githubLink: "https://github.com/Ara-O/Minim-React"
+  // },
   {
     name: "Budgeting Site",
     imageSrc: "/budgeting-site-image.webp",
@@ -94,15 +87,6 @@ let allProjects: Project[] = [
     toolsUsed: ["Vue.js"],
     demoLink: "https://windows10clone.netlify.app",
     githubLink: "https://github.com/Ara-O/Windows10-mock"
-  },
-  {
-    name: "Anime finder",
-    imageSrc: "/animes-finder-image.webp",
-    description:
-      "A side project to help users serch for, read more about, and find different animes of different genres",
-    toolsUsed: ["Vue.js", "Firebase"],
-    demoLink: "https://animesfinder.netlify.app",
-    githubLink: "https://github.com/Ara-O/Anime_Finder"
   },
   {
     name: "Project Fit",
