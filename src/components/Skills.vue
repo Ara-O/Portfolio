@@ -1,8 +1,5 @@
 <template>
-  <section
-    id="about-me-section"
-    class="px-[12%] py-10 text-white mt-32 border rounded-md skills-wrapper relative"
-  >
+  <section id="about-me-section" class="px-[12%] py-10 text-white mt-32 border rounded-md skills-wrapper relative">
     <section class="flex flex-wrap justify-between mt-20">
       <!-- Left section -->
       <section>
@@ -12,20 +9,19 @@
           I am a senior at the University of Detroit Mercy, studying Computer Science with a minor
           in Leadership. I am fascinated by how technology can enhance people's lives, and have
           worked on front-end, back-end, and mobile development projects. I've also gotten the
-          chance to dive into research and be a part of some interesting projects
+          chance to dive into research and be a part of some interesting projects.
         </h5>
         <br /><br />
         <h3 class="text-3xl">TL;DR</h3>
         <ul class="list-disc pl-5 leading-8 font-['Poppins'] text-md font-light mt-4">
           <li>Name: Eyiara "Ara" Oladipo</li>
           <li>Education Level: Senior</li>
-          <li>Interests: UX/UI design, Full stack development</li>
+          <li>Interests: UX/UI design, Full stack development, Machine Learning</li>
           <li>Hobbies: Chess, Reading</li>
         </ul>
         <a href="/Resume.pdf" download>
           <button
-            class="hover:bg-white border hover:text-black font-[Poppins] text-[13px] px-6 py-3 font-medium mt-10 rounded-full bg-black text-white transition-colors"
-          >
+            class="hover:bg-white border hover:text-black font-[Poppins] text-[13px] px-6 py-3 font-medium mt-10 rounded-full bg-black text-white transition-colors">
             Download My Resume
           </button>
         </a>
@@ -48,11 +44,7 @@
         <h3 class="text-2xl mt-10">Miscellaneous</h3>
         <br />
         <article class="flex items-start gap-10 skills">
-          <SkillsBox
-            v-for="skill in deploymentSkills"
-            :name="skill.name"
-            :logo-src="skill.logoSrc"
-          />
+          <SkillsBox v-for="skill in deploymentSkills" :name="skill.name" :logo-src="skill.logoSrc" />
         </article>
       </section>
     </section>
@@ -147,9 +139,12 @@ let deploymentSkills = [
 .skills-wrapper {
   border-radius: 2px;
   background-color: black;
-  background-clip: padding-box; /* !importanté */
-  border: solid 2px transparent; /* !importanté */
+  background-clip: padding-box;
+  /* !importanté */
+  border: solid 2px transparent;
+  /* !importanté */
 }
+
 .skills-wrapper::before {
   border-radius: 2px;
   content: "";
@@ -159,7 +154,8 @@ let deploymentSkills = [
   bottom: 0;
   left: 0;
   z-index: -1;
-  margin: -2px; /* !importanté */
+  margin: -2px;
+  /* !importanté */
   background: linear-gradient(rgb(176, 176, 176), black);
 }
 </style>
